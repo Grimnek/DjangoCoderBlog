@@ -1,3 +1,3 @@
 # DjangoCoderBlog
 
-![Img](https://github.com/AlexProgramep/DjangoCoderBlog/blob/master/DjangoBlog.png)
+![Img](https://github.com/AlexProgramep/DjangoCoderBlog/blob/main/DjangoBlog.png)
