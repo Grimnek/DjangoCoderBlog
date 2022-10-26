@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{%block title%} Зареєструватися {%endblock title%}
+
+{% block content %}
+<div class="text-center">
+    <div class="card border-dark text-bg-light">
+  <div class="card-body">
+<h2>Зареєструватися</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Зареєструватися</button>
+</form>
+</div>
+</div>
+</div>
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{%block title%} Створити пост {%endblock title%}
+
+{% block content %}
+<div class="text-center">
+    <div class="card border-dark text-bg-light">
+  <div class="card-body">
+    <h1>Створити пост</h1>
+    <form action="" method="post">{% csrf_token %}
+      <h3>{{ form.as_p }}</h3>
+      <input type="submit" value="Створити" />
+    </form>
+    </div>
+    </div>
+</div>
+
+    <script>
+        labels = document.getElementsByTagName('label');
+        for (var j = 0; j < labels.length; j++) {   
+             if (labels[j].textContent == "Title:") labels[j].textContent =    "Назва";
+             if (labels[j].textContent == "Text:") labels[j].textContent =  "Код або текст";
+             };
+</script>
+{% endblock content %}
