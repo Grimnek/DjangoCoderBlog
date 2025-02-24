@@ -1,18 +1,16 @@
 {% extends 'base.html' %}
 
-{%block title%} Зареєструватися {%endblock title%}
+{%block title%} Sign up {%endblock title%}
 
 {% block content %}
-<div class="text-center">
-    <div class="card border-dark text-bg-light">
-  <div class="card-body">
-<h2>Зареєструватися</h2>
+<div class="card border-secondary  mb-3" style="max-width: 26rem; margin-left: 25rem;">
+  <div class="card-header text-center">Registration</div>
+  <div class="card-body text-danger">
 <form method="post">
   {% csrf_token %}
   {{ form.as_p }}
-  <button type="submit">Зареєструватися</button>
+  <button class="btn btn-dark" style="margin-left: 7rem;" type="submit">Sign up</button>
 </form>
-</div>
 </div>
 </div>
 {% endblock content %}

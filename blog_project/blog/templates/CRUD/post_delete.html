@@ -1,17 +1,13 @@
 {% extends 'base.html' %}
 
-{%block title%} Видалити пост {%endblock title%}
+{%block title%} Delete the post {%endblock title%}
 
 {% block content %}
-<div class="text-center">
-    <div class="card border-dark text-bg-light">
-  <div class="card-body">
-    <h1>Видалити пост</h1>
+  <div class="alert alert-danger text-center" role="alert"><h3>Delete the post</h3>
     <form action="" method="post">{% csrf_token %}
-      <p>Ви впевнені, що хочете видалити "{{ post.title }}"?</p>
-      <input type="submit" value="Пiдтвердити" />
+      <p class="card-text">Are you sure you want to delete the post "{{ post.title }}"?</p>
+        <input class="btn btn-danger" type="submit" value=" Пiдтвердити " />
     </form>
-</div>
-</div>
-</div>
+  <div class="text-center"><button class="btn btn-dark" onclick="GoBack()">Back</button></div>
+    </div>
 {% endblock content %}

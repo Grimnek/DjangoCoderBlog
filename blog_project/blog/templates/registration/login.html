@@ -1,17 +1,15 @@
-{% extends 'base.html' %} &nbsp;{% block content %}
+{% extends 'base.html' %}
 
-{%block title%} Увійти {%endblock title%}
+{%block title%} Sign in {%endblock title%}
 
-<div class="text-center">
-    <div class="card border-dark text-bg-light">
-  <div class="card-body">
-<h2>Увійти</h2>
+{% block content %}
+    <div class="card border-primary mb-3" style="max-width: 24rem; margin-left: 25rem;">
 <form method="post">
+    <div class="card-body text-end ">
   {% csrf_token %}
   {{ form.as_p }}
-  <button type="submit">Увійти</button>
+    </div>
+  <button class="btn btn-dark" style="margin-left: 10rem;" type="submit">Sign in</button>
 </form>
-</div>
-</div>
 </div>
 {% endblock content %}

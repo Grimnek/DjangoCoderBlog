@@ -1,25 +1,24 @@
 {% extends 'base.html' %}
 
-{%block title%} Створити пост {%endblock title%}
+{%block title%} Create a post {%endblock title%}
 
 {% block content %}
-<div class="text-center">
-    <div class="card border-dark text-bg-light">
-  <div class="card-body">
-    <h1>Створити пост</h1>
+<div class="mb-3 text-center alert alert-primary text-center" role="alert"">
+  <h3>Create a post</h3>
+  <div class="text-dark">
     <form action="" method="post">{% csrf_token %}
-      <h3>{{ form.as_p }}</h3>
-      <input type="submit" value="Створити" />
+      <h5>{{ form.as_p }}</h5>
+      <input class="btn btn-dark" type="submit" value="Створити" />
     </form>
     </div>
-    </div>
-</div>
+    <div class="text-center"><button class="btn btn-dark" onclick="GoBack()">Back</button></div>
+
 
     <script>
         labels = document.getElementsByTagName('label');
         for (var j = 0; j < labels.length; j++) {   
-             if (labels[j].textContent == "Title:") labels[j].textContent =    "Назва";
-             if (labels[j].textContent == "Text:") labels[j].textContent =  "Код або текст";
+             if (labels[j].textContent == "Title:") labels[j].textContent = "Назва";
+             if (labels[j].textContent == "Text:") labels[j].textContent =  "Текст";
              };
 </script>
 {% endblock content %}
